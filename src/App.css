@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.bread-crumb{
+  padding-top:'30px';
+  font-size:'12px';
+  width:'fit-content';
+  padding-left:'30px'
+}
+a.nav-link {
+  color: #050505;
+  font-size: 14px;
+  margin-left: 10px;
+}
+input.quantity {
+  width: 50px;
+}

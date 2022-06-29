@@ -1,26 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
+import React from "react";
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
+import Home from "./components/Home/index";
 import OrderDetail from "./components/OrderDetail";
 import OrderHistory from "./components/OrderHistory/index";
 import PlaceOrder from "./components/PlaceOrder";
 import AccountDetails from "./components/AccountDetails";
 
-function App() {
-    // Collapse isOpen State
-    const [isOpen, setIsOpen] = React.useState(false);
 
+const MyRoutes = ({ props }) => {
     return (
+      
 
         < Router >
-            <div className="App">
+        <div className="App">
 
-                <Header />
-                <Routes>
+        <Routes>
                     <Route exact path='/' element={< Home />}></Route>
                     <Route exact path='/order-history' element={< OrderHistory />}></Route>
                     <Route exact path='/order-detail' element={< OrderDetail />}></Route>
@@ -28,10 +22,9 @@ function App() {
                     <Route exact path='/my-account' element={< AccountDetails />}></Route>
 
                 </Routes>
-                <Footer />
-            </div>
+        </div>
         </Router >
-    );
-}
 
-export default App;
+    );
+};
+export default MyRoutes;
